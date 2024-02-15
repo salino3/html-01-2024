@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHTML Pagement</title>
+</head>
+<body>
+    
+
+    <h1>Hi! index page</h1>
+
+<div class="containerPicture">
+
+    <picture class="firstPicture">
+        <!-- more then 650px -->
+        <source class="img1" media="(min-width: 650px)" srcset="./images/gato-blanco-01.jpg" >
+        <!-- less than 650px -->
+        <source media="(max-width: 650px)" srcset="./images/PalmasOscuras.jfif">
+        <!-- default image -->
+        <img src="./images//gatos-jugando.jfif" alt="cat">
+    </picture>
+</div>
+<hr>
+<div>
+    <!--  in case of a error or there isn't the image -->
+    <img class="imgError" src="./images//marSol.jfif" alt="test image" onerror="this.src='./images/gatos-jugando.jfif'" >
+
+</div>
+
+<hr>
+
+
+<div class="secondContainer">
+    <br>
+    <label for="browser">Look for your Browser</label> <br>
+    <input type="text" list="browsers">
+    <datalist id="browsers">
+        <option value="Internet Explores"></option>
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+    </datalist>
+</div>
+
+
+ <hr>
+<div class="thirdContainer">
+    <!-- tag list -->
+    <dl>
+        <!-- tags terms -->
+        <dt>HTML</dt>
+        <!-- tags description -->
+        <dd>markup language</dd>
+          <dt>CSS</dt>
+        <dd>styles language</dd>
+    </dl>
+</div>
+<hr>
+
+ <div class="fourthContainer">
+    <figure>
+        <img src="./images/gatos-jugando.jfif" alt="cats">
+        <figcaption>Image - cats Playing</figcaption>
+    </figure>
+ </div>
+<hr>
+<div class="fifhtContainer">
+    <code>
+
+function myFunction() {
+    console.log("This button has been clicked!")
+};
+    </code>
+    <br> <br>
+  <figcaption>Code example - using &lt;code&gt; tag </figcaption>
+</div>
+<hr>
+<div class="sixtyContainer">
+    <p>
+        Today the meeting is at <time>10:00</time>!
+    </p>
+    <p>
+        We have the dinner for <time datetime="2024-12-25 21:00" >Christmas</time> 
+    </p>
+</div>
+
+
+<script>
+
+function myFunction() {
+    console.log("This button has been clicked!")
+};
+</script>
+
+<style>
+    body {
+        padding-bottom: 100px;
+    }
+    .containerPicture {
+        border: solid 2px;
+        width: auto;
+        display: inline-block;
+    }
+    .firstPicture, .img1 {
+        border-radius: 50%;
+    }
+    .exampleClass {
+        /* yes with space */
+        visibility: hidden;
+        /* no space */
+        display:none
+        
+    }
+
+</style>
+
+</body>
+</html>

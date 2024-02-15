@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    
+  <h1>Form</h1>
+    <form id="myForm" class="my_form" >
+        <div>
+            <label for="date">Date</label>    <br> 
+            <input type="date" id="date" name="date"> 
+        </div>
+        <div>
+            <label for="datetime">Datetime</label>
+            <br>
+            <input id="datetime" type="datetime-local" name="datetime">
+        </div>
+        <div>
+            <label for="color">Choose a color</label> &nbsp;
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="containerRadioBtns">
+            <div class="boxRadioBtns">
+                <label for="malaga">Málaga</label>
+                <input name="city" id="city"  type="radio">
+            </div>
+            <div class="boxRadioBtns">
+                <label for="madrid">Madrid</label>
+                <input name="city" id="city" type="radio">
+            </div class="boxRadioBtns">
+            <div class="boxRadioBtns">
+                <label for="barcelona">Barcelona</label>
+                <input name="city" id="city"  type="radio">
+            </div>
+        </div>
+
+         <div class="containerRadioBtns">
+            <div class="boxRadioBtns">
+                <!-- value for default 'on' -->
+                <label for="tortilla">Tortilla</label>
+                <input name="tortilla" id="tortilla" value="tortilla" type="checkbox">
+            </div>
+            <div class="boxRadioBtns">
+                <label for="paella">Paella</label>
+                <input name="paella" id="paella" value="paella" type="checkbox">
+            </div class="boxRadioBtns">
+            <div class="boxRadioBtns">
+                <label for="patatas_bravas">Patatas bravas</label>
+                <input name="patatas_bravas" id="patatas_bravas" value="patatas_bravas"  type="checkbox">
+            </div>
+        </div>
+
+        <div>
+            <label for="line">Line Range</label>
+            <input type="range" name="line" id="line" min="-100" max="100" >
+        </div>
+  <div>
+       <label for="browsers">Look for your Browser</label> <br>
+       <!-- for datalist does not include 'id' -->
+    <input type="search"  name="browsers"  list="browsers">
+    <datalist id="browsers" name="browsers" >
+        <option value="Internet Explores"></option>
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+    </datalist>
+  </div>
+
+  <div>
+    <label for="url">Text a URL</label> <br>
+    <input type="url" name="url" id="url">
+  </div>
+
+        <input type="submit" value="Send">
+    </form>
+
+ <script>
+  const myForm = document.getElementById("myForm");
+
+ myForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(myForm);
+    const formValues = Object.fromEntries(formData.entries());
+
+    console.log(formValues);
+});
+ </script>
+
+
+    <style>
+        body {
+               display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .my_form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            border: solid;
+            width: min-content;
+            padding: 30px 120px;
+        }
+        .my_form input[type="checkbox"], .my_form input[type="radio"] {
+            width: 20px;
+            height: 20px;
+        }
+        .containerRadioBtns {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            gap: 10px;
+        }
+        .boxRadioBtns {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: stretch;
+         width: 100%;
+         box-sizing: border-box;
+         padding: 0px 20px;
+
+        }
+       
+    </style>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2 HTML</title>
+</head>
+<body>
+    
+    <h1>Page 2</h1>
+<details  name="element"> 
+     <summary>1º Element</summary>
+    <iframe src="index.html" width="900" height="800" frameborder="2"></iframe>
+</details>
+<br>
+<br>
+<details  name="element"> 
+     <summary>2º Element</summary>
+     <ul class="listIframeWiki">
+        <li><a  target="iframe_wiki" href="https://es.wikipedia.org/wiki/M%C3%A1laga">Málaga iframe</a></li>
+        <li><a target="iframe_wiki" href="https://es.wikipedia.org/wiki/Madrid">Madrid iframe</a></li>
+     </ul>
+    <iframe name="iframe_wiki" src="https://es.wikipedia.org/wiki/M%C3%A1laga" width="900" height="800"  frameborder="0"></iframe>
+</details>
+
+<br> <br>
+<details  name="element"> 
+    <summary>3º Element</summary>
+    <div style="display: flex; flex-direction: column;">
+        <span><b>Video Random</b></span>
+        <iframe width="599" height="366" 
+        src="https://www.youtube.com/embed/Q56bKwnPPVQ"
+         title="3 Videos Random de Gatos - Videos Cortos"
+          frameborder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+           allowfullscreen>
+        </iframe>    
+    </div>
+</details>
+ <br> <br>
+<details  name="element"> 
+    <summary>4º Element</summary>
+    <div style="display: flex; flex-direction: column;">
+    <span><b>Post Facebook Random</b></span>
+<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FBasicFitEspana%2Fvideos%2F711065971159583%2F&show_text=false&width=380&t=0"
+ width="380" height="476"
+  style="border:none; 
+  overflow:hidden" 
+  scrolling="no"
+   frameborder="0"
+    allowfullscreen="true" 
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+    allowFullScreen="true">
+</iframe>
+    <!--  -->
+   
+</div>
+ </details>
+
+<style>
+    body {
+        padding: 20px 20px 100px
+    }
+    details {
+       
+        display: inline;
+    }
+    summary {
+         cursor: pointer;
+    }
+    .listIframeWiki {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin: 20px;
+    }
+  
+</style>
+</body>
+</html>
