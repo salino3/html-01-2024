@@ -33,15 +33,17 @@
 
 <div class="secondContainer">
     <br>
-    <label for="browser">Look for your Browser</label> <br>
-    <input type="text" list="browsers">
-    <datalist id="browsers">
-        <option value="Internet Explores"></option>
-        <option value="Chrome"></option>
-        <option value="Firefox"></option>
-        <option value="Opera"></option>
-        <option value="Safari"></option>
-    </datalist>
+        <form onsubmit="event.preventDefault()"  autocomplete="off" id="myForm" class="my_form" >
+            <label for="browser">Look for your Browser</label> <br>
+            <input type="text" list="browsers" autocomplete="off">
+            <datalist id="browsers">
+                <option value="Internet Explorer"></option>
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+        </form>
 </div>
 
 
@@ -86,13 +88,6 @@ function myFunction() {
     </p>
 </div>
 
-
-<script>
-
-function myFunction() {
-    console.log("This button has been clicked!")
-};
-</script>
 
 <style>
     body {
